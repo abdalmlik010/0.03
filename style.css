@@ -210,7 +210,7 @@ body.dark-mode .hero h1 .green { color: var(--green-light); }
   text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
 }
 body.dark-mode .btn-secondary { color: var(--green-light); }
-.btn-secondary:hover { background: var(--green-light); color: #fff; transform: translateY(-3px); }
+.btn-secondary:hover { background: var(--green-dark) !important; color: #ffffff !important; border-color: var(--green-dark) !important; transform: translateY(-3px); }
 
 .hero-visual { position: relative; display: flex; align-items: center; justify-content: center; animation: fadeInRight 1s ease; }
 .hero-logo-wrapper { position: relative; display: flex; align-items: center; justify-content: center; width: 420px; height: 420px; }
@@ -233,7 +233,7 @@ body.dark-mode .btn-secondary { color: var(--green-light); }
   border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.8rem;
   border: 1px solid var(--glass-border); text-transform: uppercase; letter-spacing: 1px;
 }
-.section-title h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 900; color: var(--text-dark); }
+.section-title h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 900; color: var(--text-dark) !important; }
 .section-title h2 span { color: var(--pink); }
 .section-title p { color: var(--text-mid); font-size: 1rem; margin-top: 0.5rem; }
 .divider { width: 60px; height: 4px; background: linear-gradient(90deg, var(--pink), var(--green)); border-radius: 4px; margin: 1rem auto; }
@@ -256,16 +256,8 @@ body.dark-mode .btn-secondary { color: var(--green-light); }
 .menu { padding: 5rem 2rem; }
 .menu-inner { max-width: 1200px; margin: 0 auto; }
 .menu-tabs { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap; }
-.tab { 
-  padding: 10px 24px; 
-  border-radius: 50px; 
-  font-family: 'Tajawal', sans-serif; 
-  font-weight: 700; 
-  font-size: 0.9rem; 
-  cursor: pointer; 
-  color: var(--text-dark) !important; /* هذا بيجبر الخط يصير فاتح بالوضع الداكن */
-}
-.tab.active, .tab:hover { background: var(--pink); color: white; border-color: var(--pink); transform: translateY(-2px); }
+.tab { padding: 10px 24px; border-radius: 50px; font-family: 'Tajawal', sans-serif; font-weight: 700; font-size: 0.9rem; cursor: pointer; color: var(--text-dark) !important; }
+.tab.active, .tab:hover { background: var(--pink); color: white !important; border-color: var(--pink); transform: translateY(-2px); }
 
 .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 2rem; }
 .product-card { border-radius: 24px; overflow: hidden; position: relative; }
@@ -386,12 +378,7 @@ footer { background: var(--footer-bg); backdrop-filter: blur(15px); color: white
 .footer-brand p { margin-top: 1rem; font-size: 0.9rem; opacity: 0.7; line-height: 1.7; color: #fff;}
 .footer-socials { display: flex; gap: 12px; margin-top: 1rem; }
 .social-btn { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem; cursor: pointer; transition: all 0.3s; color: white; text-decoration: none; }
-.btn-secondary:hover { 
-  background: var(--green-dark) !important; 
-  color: #ffffff !important; 
-  border-color: var(--green-dark) !important;
-  transform: translateY(-3px); 
-}
+.social-btn:hover { background: var(--pink); transform: translateY(-3px); }
 .footer-links h4 { font-size: 1rem; font-weight: 800; margin-bottom: 1rem; color: var(--pink); }
 .footer-links a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; margin-bottom: 0.5rem; transition: color 0.3s; }
 .footer-links a:hover { color: var(--pink); }
@@ -399,45 +386,37 @@ footer { background: var(--footer-bg); backdrop-filter: blur(15px); color: white
 
 /* ======= RESPONSIVE ======= */
 @media (max-width: 768px) {
-  /* إصلاح مشكلة الخلفية في جوالات الآيفون */
   body { background-attachment: scroll; }
   
-  /* تصغير المسافات عشان تناسب شاشة الجوال */
   .hero, .features, .menu, .poster-section, .banner, .reviews, .order, footer { 
     padding: 3rem 1.5rem; 
   }
   
-  /* تعديل الهيدر والأزرار */
   .header-inner { padding: 0 1rem; }
   .logo-circle { width: 50px; height: 50px; }
   .logo-text .matcha { font-size: 1.2rem; }
-  nav { display: none; } /* القائمة مخفية في الجوال مؤقتاً */
+  nav { display: none; }
   .theme-btn { width: 35px; height: 35px; font-size: 1rem; }
   .cart-btn { padding: 8px 16px; font-size: 0.85rem; }
 
-  /* ترتيب الأقسام عمودياً وتوسيطها */
   .hero-inner, .banner-inner, .footer-inner { 
     grid-template-columns: 1fr; 
     gap: 2.5rem; 
     text-align: center; 
   }
   
-  /* تعديل قسم البداية (Hero) */
   .hero-visual { order: -1; }
   .hero-logo-wrapper { width: 260px; height: 260px; }
   .hero-logo-img { width: 240px; height: 240px; }
   .hero h1 { font-size: 2.2rem; }
   .hero-buttons { justify-content: center; }
 
-  /* ترتيب الشبكات (القريد) */
   .features-inner, .reviews-grid, .form-row { grid-template-columns: 1fr; }
   .banner-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
   .banner-visual { justify-content: center; }
   
-  /* تصغير العناوين */
   .section-title h2 { font-size: 1.8rem; }
   
-  /* إصلاح السلة الجانبية */
   .cart-sidebar { width: 100%; left: -100%; border-radius: 0; }
   .cart-sidebar.open { left: 0; }
 }
