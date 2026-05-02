@@ -386,37 +386,37 @@ footer { background: var(--footer-bg); backdrop-filter: blur(15px); color: white
 
 /* ======= RESPONSIVE ======= */
 @media (max-width: 768px) {
-  body { background-attachment: scroll; }
+  body { background-attachment: scroll !important; }
   
   .hero, .features, .menu, .poster-section, .banner, .reviews, .order, footer { 
-    padding: 3rem 1.5rem; 
+    padding: 3rem 1.5rem !important; 
   }
   
-  .header-inner { padding: 0 1rem; }
-  .logo-circle { width: 50px; height: 50px; }
-  .logo-text .matcha { font-size: 1.2rem; }
-  nav { display: none; }
-  .theme-btn { width: 35px; height: 35px; font-size: 1rem; }
-  .cart-btn { padding: 8px 16px; font-size: 0.85rem; }
+  .header-inner { padding: 0 1rem !important; }
+  .logo-circle { width: 50px !important; height: 50px !important; }
+  .logo-text .matcha { font-size: 1.2rem !important; }
+  nav { display: none !important; }
+  .theme-btn { width: 35px !important; height: 35px !important; font-size: 1rem !important; }
+  .cart-btn { padding: 8px 16px !important; font-size: 0.85rem !important; }
 
   .hero-inner, .banner-inner, .footer-inner { 
-    grid-template-columns: 1fr; 
-    gap: 2.5rem; 
-    text-align: center; 
+    grid-template-columns: 1fr !important; 
+    gap: 2.5rem !important; 
+    text-align: center !important; 
   }
   
-  .hero-visual { order: -1; }
-  .hero-logo-wrapper { width: 260px; height: 260px; }
-  .hero-logo-img { width: 240px; height: 240px; }
-  .hero h1 { font-size: 2.2rem; }
-  .hero-buttons { justify-content: center; }
+  .hero-visual { order: -1 !important; }
+  .hero-logo-wrapper { width: 260px !important; height: 260px !important; }
+  .hero-logo-img { width: 240px !important; height: 240px !important; }
+  .hero h1 { font-size: 2.2rem !important; }
+  .hero-buttons { justify-content: center !important; }
 
-  .features-inner, .reviews-grid, .form-row { grid-template-columns: 1fr; }
-  .banner-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .banner-visual { justify-content: center; }
+  .features-inner, .reviews-grid, .form-row { grid-template-columns: 1fr !important; }
+  .banner-stats { grid-template-columns: 1fr 1fr !important; gap: 1rem !important; }
+  .banner-visual { justify-content: center !important; }
   
-  .section-title h2 { font-size: 1.8rem; }
+  .section-title h2 { font-size: 1.8rem !important; }
   
-  .cart-sidebar { width: 100%; left: -100%; border-radius: 0; }
-  .cart-sidebar.open { left: 0; }
+  .cart-sidebar { width: 100% !important; left: -100% !important; border-radius: 0 !important; }
+  .cart-sidebar.open { left: 0 !important; }
 }
